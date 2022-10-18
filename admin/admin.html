@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Snowboard Corporation</title>
+<!--charset=utf-8 permet de gérer les caractères accuentués-->
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="../assets/css/back.css" rel="stylesheet" type="text/css" />
+<link href="../assets/css/dashicons.min.css" rel="stylesheet" type="text/css" />
+<link href="../assets/css/yseditor.css" rel="stylesheet" type="text/css" />
+<link href="../assets/css/syntax.css" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<!--permet de detecter la résolution du client-->
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+<script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="../assets/js/admin.js"></script>
+</head>
+<body>
+	<!--zone du header-->
+
+
+	<main>
+		<header id="header">
+			<h1><?php if(isset($titre)){echo $titre;} ?></h1>
+			<div id="deconnect"><a href="admin.php?action=deconnect">logout</a></div>
+		</header>
+
+		<aside id="gauche">
+			<ul>
+				<li><a href="../content/front.php">Retour front</a></li>
+				<li><a href="admin.php?action=contacts&cas=afficher_contacts">Gestion des contacts</a></li>
+				<li><a href="admin.php?action=comptes&cas=ajouter_comptes">Gestion des comptes</a></li>
+				<li><a href="admin.php?action=rubriques&cas=ajouter_rubriques">Gestion des rubriques</a></li>
+				<li><a href="admin.php?action=pages&cas=ajouter_pages">Gestion des pages</a></li>
+			</ul>
+		</aside>
+
+		<section id="droite">
+			<?php if(isset($popup)){echo $popup;} ?>
+			<?php if(isset($tableau)){echo $tableau;} ?>
+			<?php if(isset($form)){include($form);} ?>
+		</section>
+	</main>
+
+
+</body>
+</html>

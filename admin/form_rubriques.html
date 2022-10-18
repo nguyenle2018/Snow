@@ -1,0 +1,12 @@
+<?php if(isset($validation)){echo $validation;} ?>
+<form enctype="multipart/form-data" action="admin.php?action=rubriques&cas=<?php if(isset($action_form)){echo $action_form;} ?>" method="POST">
+
+  <?php if(isset($message['nom_rubrique'])){echo $message['nom_rubrique'];} ?>
+  <input <?php if(isset($color['nom_rubrique'])){echo $color['nom_rubrique'];} ?> placeholder="Mets ton titre" type="text" value="<?php if(isset($_POST['nom_rubrique'])){echo $_POST['nom_rubrique'];} ?>" name="nom_rubrique" />
+
+  <input placeholder="URL externe" type="text" value="<?php if(isset($_POST['lien_rubrique'])){echo $_POST['lien_rubrique'];} ?>" name="lien_rubrique" />
+
+
+  <input type="submit" value="ENVOYER" name="submit" />
+
+</form>

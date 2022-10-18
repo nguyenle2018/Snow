@@ -1,0 +1,80 @@
+#droite .YSeditor h2,
+#droite .YSeditor h3,
+#droite .YSeditor h4,
+#droite .YSeditor p,
+#droite .YSeditor ul
+{
+    position: relative;
+    border: 1px dotted gray;
+    font-size: 0.65rem;
+    font-weight: normal;
+    padding: 15px 5px;
+    margin: 5px 0;
+    text-align: initial;
+}
+#droite .YSeditor h2{
+    background-color: #c2c2c2;
+}
+#droite .YSeditor h3{
+    background-color: #d6d6d6;
+}
+#droite .YSeditor h4{
+    background-color: #e8e8e8;
+}
+
+#droite .YSEditor h2::before,
+#droite .YSEditor h3::before,
+#droite .YSEditor h4::before,
+#droite .YSEditor ul::before,
+#droite .YSEditor p::before
+{
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+
+#droite .YSeditor h2::after,
+#droite .YSeditor h3::after,
+#droite .YSeditor h4::after,
+#droite .YSeditor ul::after,
+#droite .YSeditor p::after
+{
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+}
+/*===================cas du h2=================*/
+#droite .YSeditor h2::before{
+    content: "<h2>";
+}
+#droite .YSeditor h2::after{
+    content: "</h2>";
+}
+/*===================cas du h3=================*/
+#droite .YSeditor h3::before{
+    content: "<h3>";
+}
+#droite .YSeditor h2::after{
+    content: "</h3>";
+}
+/*===================cas du h4=================*/
+#droite .YSeditor h4::before{
+    content: "<h4>";
+}
+#droite .YSeditor h4::after{
+    content: "</h4>";
+}
+/*===================cas du p=================*/
+#droite .YSeditor p::before{
+    content: "<p>";
+}
+#droite .YSeditor p::after{
+    content: "</p>";
+}
+/*===================cas du ul=================*/
+#droite .YSeditor ul::before{
+    content: "<ul>";
+}
+#droite .YSeditor ul::after{
+    content: "</ul>";
+}

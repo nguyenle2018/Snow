@@ -1,0 +1,222 @@
+*{
+	padding:0;/*marge interne*/
+	margin:0;/*marge externe*/
+	box-sizing:border-box;/*le padding et les bordures sont inclus dans la largeur des balises*/
+}
+
+html{
+	scroll-behavior:smooth;
+}
+
+body{
+	font-family:arial,sans-serif;
+}
+
+h1{
+	width:100%;
+	text-align:center;
+	font-size:1.5rem;
+}
+
+h2{
+	width:100%;
+	text-align:center;
+	font-size:1.3rem;
+  padding:30px 0;
+}
+
+/***header********************/
+#header{
+  width:calc(100vw - 250px);
+  height:60px;
+  position:absolute;
+  top:0;
+  left:250px;
+  z-index:1;
+  background:#c3C3C3;
+  display:flex;
+  align-items:center;
+  padding:0 50px;
+}
+
+/***aside********************/
+#gauche{
+  width:250px;
+  height:100vh;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:1;
+  background-color:#D6D6D6;
+  padding:120px 10px 50px;
+}
+#gauche li{
+  margin:5px 0;
+  list-style-type:none;
+  position:relative;
+}
+#gauche li a{
+  padding:8px;
+  text-decoration:none;
+  background-color:#313131;
+  color:#fff;
+  display:block;
+}
+#gauche li a:hover{
+  background-color:#000;
+}
+#gauche li:hover::after{
+  content:"";
+  top:50%;
+  right:-30px;
+  position:absolute;
+  z-index:1;
+  border-top:20px solid transparent;
+  border-bottom:20px solid transparent;
+  border-left:20px solid #D6D6D6;
+  transform:translate(0,-50%);
+}
+
+
+/***section********************/
+#droite{
+  width:calc(100vw - 250px);
+  height:calc(100vh - 60px);
+  position:absolute;
+  top:60px;
+  left:250px;
+  z-index:1;
+	padding:30px 0;
+	overflow-x:hidden;
+}
+
+.tab_result{
+  width:80%;
+  margin:20px auto;
+  border:1px solid #000;
+  border-collapse:collapse;
+}
+
+.tab_result td{
+  border:1px solid #000;
+  padding:8px;
+}
+
+.tab_result td:last-of-type a{
+  color:green;
+  text-decoration:none;
+}
+
+.center{
+	text-align:center;
+}
+
+.apercu{
+	height:30px;
+}
+
+.apercu:hover{
+	transform:scale(2);
+	transition:all 0.5s;
+}
+
+#popup{
+  width:300px;
+  height:100px;
+  box-shadow:1px 1px 10px gray;
+  background-color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  z-index:10;
+  border-radius:8px;
+}
+
+#popup a{
+  display:block;
+  padding:8px 15px;
+  background-color:green;
+  text-decoration:none;
+  color:#fff;
+  margin:20px;
+  border-radius:5px;
+  border:2px solid green;
+}
+
+#popup a:first-of-type{
+  background-color:#fff;
+  color:green;
+}
+
+#popup a:hover{
+  background-color:#000;
+}
+
+/**formulaire d'administration*************************************/
+#droite form{
+	width:80%;
+	margin:auto;
+}
+
+#droite form input,#droite form textarea,#droite form select{
+	padding:10px;
+	margin-bottom:10px;
+	display:block;
+	width:100%;
+	border-radius:4px;
+	border:1px solid #d3d3d3;
+	font-family:inherit;
+	font-size:inherit;
+}
+#droite form select{
+	width:calc(100% - 40px);
+	display:inline;
+}
+form a{
+	color:gray;
+	text-decoration:none;
+}
+form a:hover{
+	color:#000;
+}
+form .dashicons-plus{
+	font-size:2rem;
+	padding:4px;
+}
+
+
+.color_champ{
+	background:wheat;
+}
+
+#droite #titre_h1{
+	font-size:1.3rem;
+}
+
+#droite form textarea{
+	min-width:100%;
+	max-width:100%;
+	min-height:200px;
+	max-height:320px;
+	background:transparent;
+}
+
+#droite form input[type="submit"]{
+	width:auto;
+	background-color:rgb(0,0,255);
+	color:#fff;
+	margin:30px auto 0;
+}
+
+.ok{
+	color:green;
+	text-align:center;
+}
+.pas_ok{
+	color:orange;
+	text-align:center;
+}

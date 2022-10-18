@@ -1,0 +1,18 @@
+<?php if(isset($validation)){echo $validation;} ?>
+<form action="admin.php?action=comptes&cas=<?php if(isset($action_form)){echo $action_form;} ?>" method="POST">
+
+  <?php if(isset($message['nom_compte'])){echo $message['nom_compte'];} ?>
+  <input <?php if(isset($color['nom_compte'])){echo $color['nom_compte'];} ?> placeholder="Mets ton nom" type="text" value="<?php if(isset($_POST['nom_compte'])){echo $_POST['nom_compte'];} ?>" name="nom_compte" />
+
+  <?php if(isset($message['prenom_compte'])){echo $message['prenom_compte'];} ?>
+  <input <?php if(isset($color['prenom_compte'])){echo $color['prenom_compte'];} ?> placeholder="Mets ton prénom" type="text" value="<?php if(isset($_POST['prenom_compte'])){echo $_POST['prenom_compte'];} ?>" name="prenom_compte" />
+
+  <?php if(isset($message['login_compte'])){echo $message['login_compte'];} ?>
+  <input <?php if(isset($color['login_compte'])){echo $color['login_compte'];} ?> placeholder="Mets ton login" type="text" value="<?php if(isset($_POST['login_compte'])){echo $_POST['login_compte'];} ?>" name="login_compte" />
+
+  <?php if(isset($message['pass_compte'])){echo $message['pass_compte'];} ?>
+  <input <?php if(isset($color['pass_compte'])){echo $color['pass_compte'];} ?> placeholder="Mets ton pass" type="text" value="<?php if(isset($_POST['pass_compte'])){echo $_POST['pass_compte'];} ?>" name="pass_compte" />
+
+  <input type="submit" value="ENVOYER" name="submit" />
+
+</form>

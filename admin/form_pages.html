@@ -1,0 +1,27 @@
+<?php if(isset($validation)){echo $validation;} ?>
+<form enctype="multipart/form-data" action="admin.php?action=pages&cas=<?php if(isset($action_form)){echo $action_form;} ?>" method="POST">
+
+  <?php if(isset($message['id_rubrique'])){echo $message['id_rubrique'];} ?>
+
+  <select name="id_rubrique" <?php if(isset($color['id_rubrique'])){echo $color['id_rubrique'];} ?>>
+    <option value="">Sélectionne une rubrique</option>
+    
+    <?php if(isset($liste_rubriques)){echo $liste_rubriques;} ?>
+  </select>
+  <a href="admin.php?action=rubriques&cas=ajouter_rubriques"><span class="dashicons dashicons-plus"></span></a>
+
+  <?php if(isset($message['titre_page'])){echo $message['titre_page'];} ?>
+  <input id="titre_h1" <?php if(isset($color['titre_page'])){echo $color['titre_page'];} ?> placeholder="Mets ton titre" type="text" value="<?php if(isset($_POST['titre_page'])){echo $_POST['titre_page'];} ?>" name="titre_page" />
+
+  <?php if(isset($message['contenu_page'])){echo $message['contenu_page'];} ?>
+
+  <div class="YSeditor" <?php if(isset($color['contenu_page'])){echo $color['contenu_page'];} ?>>
+
+    <textarea placeholder="Mets ton contenu" name="contenu_page"><?php if(isset($_POST['contenu_page'])){echo $_POST['contenu_page'];} ?></textarea>
+  </div>
+  <?php if(isset($message['fichier_page'])){echo $message['fichier_page'];} ?>
+  <input <?php if(isset($color['fichier_page'])){echo $color['fichier_page'];} ?> name="fichier_page" type="file" value="" />
+  <?php if(isset($apercu_media)) {echo $apercu_media;} ?>
+  <input type="submit" value="ENVOYER" name="submit" />
+
+</form>

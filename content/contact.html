@@ -1,0 +1,21 @@
+<section id="contact">
+  <h1>Contactez nous</h1>
+  <form <?php if(isset($visible)){echo $visible;} ?> action="front.php?p=contact#contact" method="POST">
+
+    <?php if(isset($message['nom'])){echo $message['nom'];} ?>
+    <input <?php if(isset($color['nom'])){echo $color['nom'];} ?> placeholder="Mets ton nom" type="text" value="<?php if(isset($_POST['nom'])){echo $_POST['nom'];} ?>" name="nom" />
+
+    <?php if(isset($message['prenom'])){echo $message['prenom'];} ?>
+    <input <?php if(isset($color['prenom'])){echo $color['prenom'];} ?> placeholder="Mets ton prénom" type="text" value="<?php if(isset($_POST['prenom'])){echo $_POST['prenom'];} ?>" name="prenom" />
+
+    <?php if(isset($message['mel'])){echo $message['mel'];} ?>
+    <input <?php if(isset($color['mel'])){echo $color['mel'];} ?> placeholder="Mets ton mail" type="email" value="<?php if(isset($_POST['mel'])){echo $_POST['mel'];} ?>" name="mel" />
+
+    <input type="hidden" value="" name="email" />
+    <textarea name="message" placeholder="Mets ton message"><?php if(isset($_POST['message'])){echo $_POST['message'];} ?></textarea>
+    <input type="submit" value="ENVOYER" name="submit" />
+
+  </form>
+  <?php if(isset($merci)){echo $merci;} ?>
+
+</section>

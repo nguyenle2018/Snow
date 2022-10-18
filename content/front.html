@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Snowboard Corporation</title>
+<!--charset=utf-8 permet de gérer les caractères accuentués-->
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="../assets/css/front.css" rel="stylesheet" type="text/css" />
+<link href="../assets/css/responsive.css" rel="stylesheet" type="text/css" />
+<link href="../assets/css/dashicons.min.css" rel="stylesheet" type="text/css" />
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<!--permet de detecter la résolution du client-->
+<meta name="viewport" content="width=device-width, user-scalable=no" />
+</head>
+<body>
+	<!--zone du header-->
+	<header id="header">
+		<?php if(isset($back)){echo $back;} ?>
+
+		<a href="../index.php">
+			<img id="logo" src="../assets/images/logo.png"
+			alt="Bienvenue sur Snowboard Corporation" />
+		</a>
+		<!--menu-->
+		<nav id="menu_haut">
+
+		<?php if(isset($menu_haut)){echo $menu_haut;} ?>
+		</nav>
+	</header>
+
+	<main>
+		<!--zone du slider-->
+		<section id="slider">
+			<h1>RUN OVER<br />EVERYTHING</h1>
+		</section>
+		<?php if(isset($contenu)){include($contenu);} ?>
+
+
+	</main>
+
+
+	<footer id="footer">
+		<p>&copy;2014 Mountains Snowboard</p>
+		<p>
+			<img src="../assets/images/en.png" alt="drapeau anglais" />
+			<span>Change Region</span>
+		</p>
+	</footer>
+</body>
+</html>
